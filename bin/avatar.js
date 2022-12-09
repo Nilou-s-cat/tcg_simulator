@@ -1,12 +1,42 @@
 import {readFile, readFileSync} from 'fs'
-export function GetAvatarconfig(name1,name2,name3){
-    let configPath = "./data/avatars/"+name1+".json"
+export function GetAvatarconfig(name){
+    var avatarconfig = new Array(3)
+    for (let i=0;i<name.length;i++){
+        let configPath = "./data/avatars/"+name[i]+".json"
+        console.log("读取角色配置文件中："+configPath)
+        let avatarjson = JSON.parse(readFileSync(configPath))
+        console.log("读取完整，内容为："+avatarjson)
+        avatarconfig[i]={
+            "id":avatarjson.Id,
+            "name":avatarjson.Name,
+            "type":avatarjson.Type,
+            "health":avatarjson.Health,
+            "element":avatarjson.Element,
+            "skillpoint":0,
+            "attachedElement":null,
+            "summon":null,
+            "isfrozen":false,
+            "onfight":false,
+            "pingyiLevel": null
+        }
+        console.log("写入数组："+avatarconfig[i])
+    }
+    for (let i=0;i<avatarconfig.length;i++){
+        if ( avatarconfig[i]["name"] == "seino" ){
+            avatarconfig[i]["pingyiLevel"]=1
+        } else {
+            break
+        }
+    }
+    return avatarconfig
+    /*let configPath = "./data/avatars/"+name1+".json"
     console.log("读取角色配置文件中："+configPath)
     let avatarjson = JSON.parse(readFileSync(configPath))
     console.log("读取完整，内容为："+avatarjson)
-    var avatarconfig = new Array()
+
     avatarconfig[0]={
         "id":avatarjson.Id,
+        "name":avatarjson.Name,
         "type":avatarjson.Type,
         "health":avatarjson.Health,
         "element":avatarjson.Element,
@@ -24,6 +54,7 @@ export function GetAvatarconfig(name1,name2,name3){
     console.log("读取完整，内容为："+avatarjson)
     avatarconfig[1]={
         "id":avatarjson.Id,
+        "name":avatarjson.Name,
         "type":avatarjson.Type,
         "health":avatarjson.Health,
         "element":avatarjson.Element,
@@ -41,6 +72,7 @@ export function GetAvatarconfig(name1,name2,name3){
     console.log("读取完整，内容为："+avatarjson)
     avatarconfig[2]={
         "id":avatarjson.Id,
+        "name":avatarjson.Name,
         "type":avatarjson.Type,
         "health":avatarjson.Health,
         "element":avatarjson.Element,
@@ -58,8 +90,7 @@ export function GetAvatarconfig(name1,name2,name3){
         avatarconfig[1]["pingyiLevel"]=1
     } else if(name3="seino"){
         avatarconfig[2]["pingyiLevel"]=1
-    }
-    return avatarconfig
+    }*/
 }
         //console.log("角色id："+avatarconfig["id"])
         //console.log("角色初始生命值："+avatarconfig["health"])
