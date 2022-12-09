@@ -1,0 +1,14 @@
+{
+    "Id":10031,
+    "Type":"Sword",
+    "Name":
+    {
+        "zh":"旅行剑",
+        "en":"Traverler's Handy Sword"
+    },
+    "Cost":2,
+    "Effect":
+    {
+        "DamageBonus":1
+    }
+}

@@ -1,5 +1,5 @@
 {
-    "sword":{
+    "Sword":{
         "lvxingjian":
         {
             "Id":10031,
@@ -54,8 +54,16 @@
             }
         }
     },
-    "claymore":
+    "Claymore":
     {
-        
+    },
+    "Bow":
+    {
+    },
+    "Catalyst":
+    {
+    },
+    "Polearm":
+    {
     }
 }

@@ -1,5 +1,6 @@
-let fs = require('fs')
-export function GetDice(card,num){ /*获取骰子*/ //测试通过
+import { GetAvatarElement } from './avatar.js'
+
+export function GetDice(card,num,avatarconfig){ /*获取骰子*/ //测试通过
     var dicelist=new Array(num)    
     switch(card){
         case "none":
@@ -10,19 +11,18 @@ export function GetDice(card,num){ /*获取骰子*/ //测试通过
             break
         case "qunyuge":
             //获取角色元素，根据元素先给数组添加两个初始骰子，然后再执行getdice(none,num-2)
-            var avatar_element=GetAvatarElement(onfight)
+            var avatar_element=GetAvatarElement(avatarconfig)
             dicelist[0]=avatar_element
             dicelist[1]=avatar_element
-            for (i=2;i<num;i++){
+            for (let i=2;i<num;i++){
                 var element=Math.floor(Math.random()*8)
                 dicelist[i]=element
             }
             break
     }
-    
-    
     return dicelist
 }
+
 export function GetDicename(dicelist,dicepos){ /*获取骰子名称*/ //测试通过
     const typeMap=
     {
@@ -38,13 +38,14 @@ export function GetDicename(dicelist,dicepos){ /*获取骰子名称*/ //测试�
     var dicename=typeMap[dicelist[dicepos-1]]
     return dicename
 }
+
 export function ChangeDiceElement(dicelist,dicenum,changenum,method){
     var dicenum = dicenum-1
     switch(method){
         case 1: //测试通过
             //var avatarelement=getavatarelement()
             //TO DO:完善角色部分再说
-            var avatar_element="风"
+            var avatar_element=null
             var dice_changed_element
             switch(avatar_element){
                 case "风":
