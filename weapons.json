@@ -1,0 +1,61 @@
+{
+    "sword":{
+        "lvxingjian":
+        {
+            "Id":10031,
+            "Name":
+            {
+                "zh":"旅行剑",
+                "en":"Traverler's Handy Sword"
+            },
+            "Cost":2,
+            "Effect":
+            {
+                "DamageBonus":1
+            }
+        },
+        "jilijian":
+        {
+            "Id":10041,
+            "Name":
+            {
+                "zh":"祭礼剑",
+                "en":"Sacrificial Sword"
+            },
+            "Cost":3,
+            "Effect":
+            {
+                "DamageBonus":1,
+                "ExtraDice":
+                {
+                    "GetCondition":"DoSkill",
+                    "GetNum":1
+                }
+            }
+        },
+        "fengyingjian":
+        {
+            "Id":10051,
+            "Name":
+            {
+                "zh":"风鹰剑",
+                "en":"Aquila Favonia"
+            },
+            "Cost":3,
+            "Effect":
+            {
+                "DamageBonus":1,
+                "SelfHeal":
+                {
+                    "HealCondition":"EnemyDoSkill",
+                    "HealNum":1,
+                    "HealTime":2
+                }
+            }
+        }
+    },
+    "claymore":
+    {
+        
+    }
+}
