@@ -6,6 +6,5 @@ export function SetDmgConfig(avatarconfig){
         var avatarName=avatarconfig[i]["name"]
         var readpath='./data/avatars/'+avatarName+'.json'
         var avatarjson=JSON.parse(readFileSync(readpath))
-        dmg[i]=
     }
 }
