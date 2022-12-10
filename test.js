@@ -1,5 +1,6 @@
-/*import { GetAvatarconfig, SetAvatarEquipment, SetAvatarOnFight, SetAvatarWeapon } from "./bin/avatar.js";
-import { CauseDmg, Zhengfa } from "./bin/damage.js";
+import { CauseDmg } from "./bin/damage.js";
+
+import { GetAvatarconfig, SetAvatarEquipment, SetAvatarOnFight, SetAvatarWeapon } from "./bin/avatar.js";
 import { GetDice, GetDicename } from "./bin/dice.js";
 
 var avatarlist=GetAvatarconfig(["kaeya","test2","test3"])
@@ -24,10 +25,10 @@ console.log(avatarlist)
 avatarlist[0]["attachedElement"]=5
 CauseDmg(avatarlist,1,9,6)
 console.log(avatarlist)*/
-var test={
-    "1":1,
-    "2":2
-}
-var testtest=test["1"]
-test["1"]=3
-console.log(testtest)
+console.log(avatarlist)
+console.log("----------")
+avatarlist[1]["attachedElement"]=3
+console.log(avatarlist)
+console.log("----------")
+CauseDmg(avatarlist,2,3,1)
+console.log(avatarlist)

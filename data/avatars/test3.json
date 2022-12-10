@@ -2,8 +2,8 @@
     "Name":"test3",
     "Id":103,
     "Type":"Sword",
-    "Element":999,
-    "Health":999,
+    "Element":7,
+    "Health":10,
     "Skill":
     {
         "NormalAttack":
