@@ -32,6 +32,7 @@ export function CauseDmg(avatarconfig,avatarpos,basedmg,dmgelement){
         console.log("角色死掉了")
         avatarconfig[avatarpos]["health"]=0
     } else {
+        if (avatarAttachedElement==1)
         if (avatarAttachedElement==5){
             if (dmgelement==6){
                 var dmg=basedmg+2
