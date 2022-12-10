@@ -4,7 +4,7 @@ export function GetDice(card,num,avatarconfig){ /*获取骰子*/ //测试通过
     var dicelist=new Array(num)    
     switch(card){
         case "none":
-            for (i=0;i<num;i++){
+            for (let i=0;i<num;i++){
                 var element=Math.floor(Math.random()*8)
                 dicelist[i]=element
             }

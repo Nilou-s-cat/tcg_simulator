@@ -1,0 +1,12 @@
+{
+    "Id":501,
+    "Name":"三费火套",
+    "Cost":{
+        "Element":null,
+        "condition":"same",
+        "value":3
+    },
+    "Effect":{
+        "AvatarSkillCost":-1
+    }
+}
