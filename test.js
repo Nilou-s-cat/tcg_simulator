@@ -1,4 +1,4 @@
-import { GetAvatarconfig, SetAvatarEquipment, SetAvatarOnFight, SetAvatarWeapon } from "./bin/avatar.js";
+/*import { GetAvatarconfig, SetAvatarEquipment, SetAvatarOnFight, SetAvatarWeapon } from "./bin/avatar.js";
 import { CauseDmg, Zhengfa } from "./bin/damage.js";
 import { GetDice, GetDicename } from "./bin/dice.js";
 
@@ -20,7 +20,14 @@ console.log(avatarlist)
 SetAvatarEquipment(avatarlist,1,501)
 console.log(avatarlist)
 SetAvatarWeapon(avatarlist,2,10031)
-console.log(avatarlist)*/
+console.log(avatarlist)
 avatarlist[0]["attachedElement"]=5
 CauseDmg(avatarlist,1,9,6)
-console.log(avatarlist)
+console.log(avatarlist)*/
+var test={
+    "1":1,
+    "2":2
+}
+var testtest=test["1"]
+test["1"]=3
+console.log(testtest)
